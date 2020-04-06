@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+   <meta name="description" content="Réservez votre Cy'clic d'un simple clic !! Simple et rapide, choisissez votre station, réservez et profitez de votre Vélo'v.">
+   <meta name="viewport" content="width=device-width">
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/> 
+   <link rel="stylesheet" type="text/css"
+   href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="fontawesome/web-fonts-with-css/css/fontawesome-all.min.css"> 
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Réservation de CY'CLIC à Rouen</title>
+</head>
+<body>
+
+
+	<div class="bloc_page">
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top justify-content-center">
+			<a href="#" class="navbar-brand"><span>CY'CLIC</span> ROUEN</a>
+		</nav>
+
+    	
+    	<section id="slider-inner">
+           <h2><u>Louer un velo ?</u></h2>
+
+      		<!-- Conteneur du slider -->
+      		<div id="slider">
+        <!-- Slide_1 image + texte -->
+        		<div class="etape">
+          			<div class="image-slider">
+            			<img src="./images/etape1.png" alt="cliquez sur un marqueur">
+          			</div>
+          			<div class="text-slider">
+            			<h3>Etape 1</h3>
+            			<p>Cliquez sur un marqueur pour afficher les stations disponibles sur Rouen.</p>
+          			</div>
+        		</div>
+        <!-- Slide_2 image + texte -->
+        		<div class="etape">
+          			<div class="image-slider">
+            			<img src="./images/etape2.png" alt="détails station">
+          			</div>
+          			<div class="text-slider">
+            			<h3>Etape 2</h3>
+            			<p>Sélectionnez une station pour afficher ses informations et commencer votre réservation en cliquant sur "Réserver".</p>
+          			</div>
+        		</div>
+        <!-- Slide_3 image + texte -->
+        		<div class="etape">
+          			<div class="image-slider">
+            			<img src="./images/etape3.png" alt="signez et valider">
+          			</div>
+          			<div class="text-slider">
+            			<h3>Etape 3</h3>
+            			<p>Après avoir signé, confirmez votre réservation en cliquant sur "Valider".</p>
+          			</div>
+        		</div>
+        <!-- Slide_4 image + texte -->
+        		<div class="etape">
+          			<div class="image-slider">
+            			<img src="./images/etape4.png" alt="réservation">
+          			</div>
+          			<div class="text-slider">
+            			<h3>Etape 4</h3>
+            			<p>Votre vélo est réservé pour 20 minutes, mais vous pouvez l'annuler à tout moment.</p>
+          			</div>
+				</div>
+				<span class="buttons" id="prev"><i class="fas fa-chevron-left"></i></span>
+				<span class="buttons" id="next"><i class="fas fa-chevron-right"></i></span>
+				<span class="buttons" id="playhidden"><i class="fas fa-play"></i></span>
+				<span class="buttons" id="pausehidden"><i class="fas fa-pause"></i></span>
+      		</div>
+		  </section>
+
+      <div id="main">
+			     <div id="map"></div>
+			     
+        <aside id="formulaire">
+           <div id="infoStation">
+				       <h4>INFOS DE LA STATION <br/> <span id="stationName"></span></h4>
+				       <p id="add">Adresse : <br/><span id="adress"></span></p>
+				       <p >Nombre de places : <span id="slotNumber"></span></p>
+				       <p>Velos disponibles : <span id="bikeCounter"></span></p>
+				       <button id="bookingButton">Réserver</button>
+			     </div>
+      
+           <div class="reservation" id="reservation">
+               <h4>Signez pour réserver</h4>
+               <form method="post" action="traitement.php">
+                    <p>
+                       <input id="firstName" type="text" name="name" placeholder="prenom" required>
+                    </p>  
+                    <p>
+                       <input id="lastName" type="text" name="name" placeholder="nom" required>
+                    </p>    
+               <hr />
+               <i class="fas fa-pencil-alt"></i>
+               <br />
+               <canvas id="canvas" width="250" height="125"></canvas>
+               <div class="boutons">
+                   <button type="button" class="effacer">Effacer</button>
+                   <button type="submit" class="valider" disabled>Valider</button>
+              </div>
+            </form>
+            </div>
+         </aside>   
+      </div>
+
+         
+
+
+
+
+          <!-- FOOTER -->
+
+      <footer id="footer">
+           <h3>Réservation</h3>
+           <span class="footer-text">Aucune réservation en cours</span>
+           <p class="timer">
+           <span class="minutes"></span>
+           <span class="secondes"></span>
+           </p>
+           <button type="button" class="annuler">Annuler</button>
+      </footer>
+
+
+
+	<script src ="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script> 
+  <script src="./js/slider.js"></script>
+	<script src="./js/veloMap.js" defer></script>
+  <script src="./js/canvas.js" defer></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,448 @@
+/* ------------- POLICES DU SITE ------------- */
+
+@font-face 
+{
+    font-family: 'robotoregular';
+    src: url('./font/Roboto-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'robotobold';
+    src: url('./font/Roboto-Bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'robotomedium';
+    src: url('./font/Roboto-Medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face 
+{
+    font-family: 'robotoblack';
+    src: url('./font/Roboto-Black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* ------------- REGLES GENERALES ------------- */
+
+
+body 
+{  
+    overflow-x: hidden;  
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    border:none;
+    display: flex;
+    flex-direction: column;
+    font-family: 'robotoregular', Arial, sans-serif;
+    background: white;
+  }
+
+.bloc_page 
+{
+
+    width: 100%;
+    margin: auto;
+    border: 1px solid grey;
+
+}
+
+
+
+
+
+/* ------------- HEADER ------------- */
+
+.navbar
+{
+    background-color: white;
+    box-shadow:0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+
+}
+
+
+.sizeheader
+{
+	  padding-right: 20px;
+}
+
+
+#logo
+{
+    width: 5rem;
+
+}
+
+span
+{
+    color: #5cadd3;
+}
+
+
+
+
+
+
+/* ------------- SLIDER ------------- */
+
+#slider-inner 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+
+#slider-inner h2 
+{
+    font-weight:bold;
+    font-size: 1.8em;
+    padding-bottom: 25px;
+    color: black;
+    letter-spacing: 2px;
+}
+
+
+#slider 
+{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    min-width: 320px;
+    min-height: 320px;
+    width: 80%;
+    margin: auto;
+    border: 1px solid grey;
+    background-color: rgb(10, 100, 150, 0.1);
+    box-shadow: 3px 3px 3px grey;
+    border-radius: 10px;
+}
+
+
+.etape 
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image-slider 
+{
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+}
+
+
+.image-slider img 
+{
+    width: 100%;
+}
+
+
+.text-slider 
+{
+    padding: 10px;
+    margin: 5px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.text-slider h3 
+{
+    color: white;
+    border-radius: 5px;
+    background-color: #5cadd3;
+    padding: 5px;
+}
+
+
+.buttons
+{
+    position: absolute;
+    color: black;
+    font-size: 1.8em;
+}
+
+
+.buttons:hover
+{
+	  color:#5cadd3;
+}
+
+
+#prev 
+{
+    right: 105%;
+    bottom: 40%;
+}
+
+
+#next 
+{
+
+    left: 105%;
+    bottom: 40%;
+}
+
+
+
+#playhidden
+{
+    visibility: hidden;
+    font-size: 1.3em;
+  	bottom: 100%;
+
+}
+
+#pausehidden
+{	
+    font-size: 1.2em;
+  	bottom: 100%;
+}
+
+
+/* ------------- MAIN ------------- */
+
+#main 
+{
+    padding: 50px 15px 50px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: solid 3px;
+    justify-content: space-around;
+}
+
+
+#map 
+{ 
+  	margin: 5px;
+    height: 500px; 
+  	width: 65%;
+  	min-width: 320px;
+  	border: solid 4px white;
+  	border-radius: 1%; 
+  	box-shadow: 1px 1px 3px grey;
+}
+
+
+.marker-cluster div 
+{
+  	width: 55px;
+  	height: 55px;
+  	border-radius: 50%;
+  	display:flex;
+  	justify-content:center;
+  	align-items: center;
+}
+
+
+.marker-cluster-small div 
+{
+	  background-color: lightgreen;
+}
+
+
+.marker-cluster-medium div 
+{
+	  background-color: yellow;
+}
+
+
+.marker-cluster-large div 
+{
+	  background-color: red;
+}
+
+
+/* Mise en page cadre infos */
+
+
+#formulaire 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px;
+    min-width: 320px;
+    width: 30%;
+}
+
+
+
+#infoStation {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;	
+    justify-content: center;
+    border: solid 4px white;
+    box-shadow: 1px 1px 3px grey;
+  	border-radius: 1%; 
+    margin: 5px;
+    padding: 30px;
+    background-color:rgba(10, 100, 150, 0.1);
+}
+h4
+{
+    text-align: center;
+}
+
+#bookingButton
+{    
+    background-color: #5cadd3;
+    border: none;
+    color: white;
+    padding: 13px;
+    max-width: 10rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+}
+	
+#add
+{
+    text-align: center;
+}
+
+
+/* Mise en page cadre reservation avec signature */
+.reservation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    padding: 30px;
+    border: 4px solid white;
+    background-color: rgb(10,100,150, 0.1);
+    box-shadow: 1px 1px 3px grey;
+    border-radius: 1px;
+}
+
+
+.reservation h4 
+{
+    margin-bottom: 30px;
+}
+
+
+#canvas 
+{
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+
+
+/* ------------- FOOTER ------------- */
+
+#footer 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: rgb(10,100,150, 0.1);
+}
+
+
+#footer p
+{
+    margin: 5px 0 15px 0;
+}
+
+
+#footer h3 
+{
+    margin: 0 0 15px 0;
+}
+
+
+
+.boutons
+{
+    justify-content: space-between;
+}
+
+.valider
+{    
+    border: none;
+    color: white;
+    padding: 10px;
+    max-width: 10rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.effacer
+{    
+    border: none;
+    padding: 10px;
+    margin-right: 25px;
+    max-width: 10rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.effacer:hover
+{
+    background-color: #5cadd3;
+    color: white;
+}
+
+
+
+.annuler, .reserver, .reservation 
+{
+    display: none; 
+}
+
+
+.annuler
+{
+    background-color: #5cadd3;
+    border: none;
+    color: white;
+    padding: 13px;
+    max-width: 10rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    cursor: pointer;
+}
